@@ -7,12 +7,18 @@
 
 struct rect
 {
-    Point3f ul, ur, dl, dr; //up-left up-right down-left down-right
+    Point3f ul; //up-left
+    Point3f ur; //up-right
+    Point3f dl; //down-left
+    Point3f dr; //down-right
 };
 
 struct joints
 {
-    Point3f A,B,C,D;
+    Point3f A;
+    Point3f B;
+    Point3f C;
+    Point3f D;
 };
 
 #endif // UTIL_H
