@@ -1,0 +1,3 @@
+/home/monika/CLionProjects/hexapod/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/monika/CLionProjects/hexapod/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/monika/CLionProjects/hexapod/cmake-build-debug/CMakeFiles/hex.dir
