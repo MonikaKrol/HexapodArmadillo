@@ -7,9 +7,9 @@
 
 #include <armadillo>
 //#include <opencv2/core/core.hpp>
-#include "util.h"
-#include "maestro.h"
-#include "Robot/Point.h"
+#include "src/Robot/Point.h"
+#include "src/util.h"
+#include "src/maestro.h"
 
 class Leg
 {

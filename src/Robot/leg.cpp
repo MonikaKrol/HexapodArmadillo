@@ -1,13 +1,11 @@
-#include "Robot/leg.h"
-#include <armadillo>
+#include "src/Robot/leg.h"
 
 //using namespace cv;
 using namespace arma;
-//using namespace Datum;
 
 Leg::Leg(Point3f joint1, Point3f angles1, Point3f lengths1, Point3f signals1)
 {
-    legJoints.A = joint1;
+    legJoints = joints(joint1, joint1, joint1, joint1);
     angles = angles1;
     lengths = lengths1;
     signals = signals1;
@@ -23,15 +21,15 @@ void Leg::initJointPoints()
 
 void Leg::calculateJointPoints()
 {
-    fmat P1 = { {lengths(0), 0, 0} };
-    fmat R1 = { {cos(angles(0)), 0, sin(angles(0))},
+    fmat P1 = { {lengths.x, 0, 0} };
+    fmat R1 = { {cos(angles.x), 0, sin(angles.x)},
                 {0, 1, 0},
-                {-sin(angles(0), 0, cos(angles(0))} };
+                {-sin(angles.x), 0, cos(angles.x)} };
     fmat P11 = R1*P1;
     P11 = R*P11;
     legJoints.B = Point3f(P11(0,0), P11(0,1), P11(0,2)) + legJoints.A;
 
-    fmat P2 = { {lengths(1), 0, 0} };
+    fmat P2 = { {lengths.y, 0, 0} };
     fmat R2 = { {cos(angles.y), -sin(angles.y), 0},
                 {sin(angles.y), cos(angles.y), 0},
                 {0, 0, 1} };
@@ -41,7 +39,7 @@ void Leg::calculateJointPoints()
 
     fmat P3 = { {lengths.z, 0, 0} };
     fmat R3 = { {cos(angles.z), -sin(angles.z), 0},
-                {sin(angles.z, cos(angles.z), 0},
+                {sin(angles.z), cos(angles.z), 0},
                 { 0, 0, 1} };
     fmat P33 = R1*(R3*P3);
     P33 = R*P33;

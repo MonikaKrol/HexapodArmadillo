@@ -10,6 +10,26 @@
 armadillo
 -
 
+..//src/Robot/leg.h
+armadillo
+-
+src/Robot/Point.h
+../src/Robot/src/Robot/Point.h
+src/util.h
+../src/Robot/src/util.h
+src/maestro.h
+../src/Robot/src/maestro.h
+
+..//src/maestro.h
+termios.h
+-
+
+..//src/util.h
+armadillo
+-
+src/Robot/Point.h
+../src/src/Robot/Point.h
+
 ../src/Robot/Point.h
 armadillo
 -
@@ -17,12 +37,12 @@ armadillo
 ../src/Robot/leg.h
 armadillo
 -
-util.h
-../src/Robot/util.h
-maestro.h
-../src/Robot/maestro.h
-Robot/Point.h
-../src/Robot/Robot/Point.h
+src/Robot/Point.h
+../src/Robot/src/Robot/Point.h
+src/util.h
+../src/Robot/src/util.h
+src/maestro.h
+../src/Robot/src/maestro.h
 
 ../src/Robot/robot.h
 armadillo
@@ -71,10 +91,8 @@ armadillo
 -
 
 /home/monika/CLionProjects/hexapod/src/Robot/leg.cpp
-Robot/leg.h
-/home/monika/CLionProjects/hexapod/src/Robot/Robot/leg.h
-armadillo
--
+src/Robot/leg.h
+/home/monika/CLionProjects/hexapod/src/Robot/src/Robot/leg.h
 
 /home/monika/CLionProjects/hexapod/src/Robot/robot.cpp
 Robot/robot.h

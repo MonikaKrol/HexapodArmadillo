@@ -5,31 +5,33 @@
 
 class Point2f
 {
-private:
+public:
     float x;
     float y;
-public:
     Point2f(float x, float y);
+    Point2f();
 };
 
 class Point3f
 {
-private:
+public:
     float x;
     float y;
     float z;
-public:
     Point3f(float x, float y, float z);
+    Point3f();
+    Point3f operator+(const Point3f &givenPoint3f);
+    Point3f operator-(const Point3f &givenPoint3f);
 };
 
 class Point3i
 {
-private:
+public:
     int x;
     int y;
     int z;
-public:
     Point3i(int x, int y, int z);
+    Point3i();
 };
 
 #endif // POINT_H

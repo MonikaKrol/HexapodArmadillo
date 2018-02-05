@@ -11,6 +11,14 @@ Point3f::Point3f(float x, float y, float z)
     Point3f = { {float x, float y, float z} };
 }
 
+Point3f Point3f::operator+(const Point3f &givenPoint3f) {
+    return Point3f();
+}
+
+Point3f Point3f::operator-(const Point3f &givenPoint3f) {
+    return Point3f();
+}
+
 Point3i::Point3i(int x, int y, int z)
 {
     Point3i = { {int x, int y, int z} };

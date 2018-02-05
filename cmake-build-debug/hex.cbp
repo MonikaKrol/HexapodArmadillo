@@ -95,6 +95,9 @@
 		<Unit filename="/home/monika/CLionProjects/hexapod/src/Robot/Point.cpp">
 			<Option target="hex"/>
 		</Unit>
+		<Unit filename="/home/monika/CLionProjects/hexapod/src/Robot/Point.h">
+			<Option target="hex"/>
+		</Unit>
 		<Unit filename="/home/monika/CLionProjects/hexapod/src/Robot/leg.cpp">
 			<Option target="hex"/>
 		</Unit>
