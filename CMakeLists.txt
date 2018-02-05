@@ -16,5 +16,6 @@ set(SOURCES
 	src/TCP/tcpacceptor.h src/TCP/tcpacceptor.cpp
 	src/TCP/tcpstream.h src/TCP/tcpstream.cpp)
 
-include_directories( ${PROJECT_SOURCE_DIR} ${libopenblas} ${liblapack})
+include_directories( ${PROJECT_SOURCE_DIR} ${ARMADILLO_INCLUDE_DIRS})
 add_executable( hex ${SOURCES} )
+target_link_libraries( hex ${ARMADILLO_LIBRARIES} )

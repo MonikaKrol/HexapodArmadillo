@@ -6,10 +6,21 @@ Point2f::Point2f(float _x, float _y) {
     y = _y;
 }
 
+Point2f::Point2f() {
+    x = 0;
+    y = 0;
+}
+
 Point3f::Point3f(float _x, float _y, float _z) {
     x = _z;
     y = _y;
     z = _z;
+}
+
+Point3f::Point3f() {
+    x = 0;
+    y = 0;
+    z = 0;
 }
 
 Point3f Point3f::operator+(const Point3f &givenPoint3f) {
@@ -75,6 +86,12 @@ Point3d::Point3d(double _x, double _y, double _z) {
     z = _z;
 }
 
+Point3d::Point3d() {
+    x = 0;
+    y = 0;
+    z = 0;
+}
+
 Point3d Point3d::operator=(const Point3f &givenPoint3f) {
     Point3d temp;
 
@@ -99,4 +116,10 @@ Point3i::Point3i(int _x, int _y, int _z) {
     x = _z;
     y = _y;
     z = _z;
+}
+
+Point3i::Point3i() {
+    x = 0;
+    y = 0;
+    z = 0;
 }

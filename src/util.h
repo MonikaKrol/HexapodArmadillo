@@ -28,7 +28,7 @@ public:
         C = c;
         D = d;
     }
-    joints();
+    joints(){};
 
 };
 
