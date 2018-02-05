@@ -12,36 +12,27 @@ CMakeFiles/hex.dir/src/Robot/leg.cpp.o
  /home/monika/CLionProjects/hexapod/src/Robot/leg.cpp
 CMakeFiles/hex.dir/src/Robot/robot.cpp.o
  ..//src/Robot/Point.h
+ ..//src/Robot/leg.h
+ ..//src/Robot/robot.h
  ..//src/maestro.h
  ..//src/util.h
- ../src/Robot/Point.h
- ../src/Robot/leg.h
- ../src/Robot/robot.h
- ../src/maestro.h
- ../src/util.h
  /home/monika/CLionProjects/hexapod/src/Robot/robot.cpp
 CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o
  ..//src/Robot/Point.h
+ ..//src/Robot/leg.h
+ ..//src/Robot/robot.h
+ ..//src/Robot/robotcontroler.h
+ ..//src/Robot/robotwalk.h
  ..//src/maestro.h
  ..//src/util.h
- ../src/Robot/Point.h
- ../src/Robot/leg.h
- ../src/Robot/robot.h
- ../src/Robot/robotcontroler.h
- ../src/Robot/robotwalk.h
- ../src/maestro.h
- ../src/util.h
  /home/monika/CLionProjects/hexapod/src/Robot/robotcontroler.cpp
 CMakeFiles/hex.dir/src/Robot/robotwalk.cpp.o
  ..//src/Robot/Point.h
+ ..//src/Robot/leg.h
+ ..//src/Robot/robot.h
+ ..//src/Robot/robotwalk.h
  ..//src/maestro.h
  ..//src/util.h
- ../src/Robot/Point.h
- ../src/Robot/leg.h
- ../src/Robot/robot.h
- ../src/Robot/robotwalk.h
- ../src/maestro.h
- ../src/util.h
  /home/monika/CLionProjects/hexapod/src/Robot/robotwalk.cpp
 CMakeFiles/hex.dir/src/TCP/tcpacceptor.cpp.o
  /home/monika/CLionProjects/hexapod/src/TCP/tcpacceptor.cpp
@@ -59,14 +50,11 @@ CMakeFiles/hex.dir/src/maestro.cpp.o
  /home/monika/CLionProjects/hexapod/src/maestro.h
 CMakeFiles/hex.dir/src/main.cpp.o
  ..//src/Robot/Point.h
+ ..//src/Robot/leg.h
+ ..//src/Robot/robot.h
+ ..//src/Robot/robotwalk.h
  ..//src/maestro.h
  ..//src/util.h
- ../src/Robot/Point.h
- ../src/Robot/leg.h
- ../src/Robot/robot.h
- ../src/Robot/robotwalk.h
- ../src/maestro.h
- ../src/util.h
  /home/monika/CLionProjects/hexapod/src/Robot/robotcontroler.h
  /home/monika/CLionProjects/hexapod/src/TCP/tcpacceptor.h
  /home/monika/CLionProjects/hexapod/src/TCP/tcpstream.h

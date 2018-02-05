@@ -3,22 +3,6 @@ project( hex )
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(OpenCV_INCLUDE_DIRS
-	/home/pi/opencv/opencv/¬/home/pi/opencv/build/include
-    /home/pi/opencv/opencv/¬/home/pi/opencv/build/include/opencv2
-    ${PROJECT_SOURCE_DIR}/src
-)
-
-set(OpenCV_LIB_DIR
-	/home/pi/opencv/opencv/¬/home/pi/opencv/build/lib
-)
-
-set(OpenCV_LIBS
-	opencv_core
-	opencv_highgui
-	pthread
-)
-
 set(SOURCES
 	src/main.cpp
 	src/Robot/leg.h src/Robot/leg.cpp

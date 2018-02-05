@@ -1,7 +1,8 @@
-#include "Robot/robot.h"
+#include "src/Robot/robot.h"
 //#include <opencv2/highgui/highgui.hpp>
 #include <unistd.h>
 #include <armadillo>
+#include "src/Robot/Point.h"
 
 //using namespace cv;
 using namespace arma;
@@ -19,7 +20,7 @@ Robot::Robot(Point3f pos, Point3f ang, float width1, float length1, Point3f legl
     restart(pos, ang);
 }
 
-void Robot::restart::Point3f(Point3f pos, Point3f ang)
+void Robot::restart(Point3f pos, Point3f ang)
 {
     position = pos;
     angles = ang;
@@ -33,13 +34,11 @@ void Robot::restart::Point3f(Point3f pos, Point3f ang)
     lFrame.ur = Point3f(width/2,0,length/2);
 
     for(int i = 3; i < 6; ++i)
-        legs[i].setR((arma:Mat<float>({ {-1, 0, 0}, {0, 1, 0}, {0, 0, -1} })));
+        legs[i].setR((arma::Mat<float>({ {-1, 0, 0}, {0, 1, 0}, {0, 0, -1} })));
     for(int i = 0; i < 3; ++i)
         legs[i].setR((arma::Mat<float>( { {1, 0, 0}, {0, 1, 0}, {0, 0, 1} } )));
 
-    Point3f ang1(0.0 ,0.0 ,Datum::pi/2);
-
-    Point3i = { {int x, int y, int z} };
+    Point3f ang1(0.0 ,0.0 ,datum::pi/2);
 
     legs[0].setJointA(lFrame.ur);
     legs[0].setSignals(Point3f(5900,5140,4960));
@@ -80,52 +79,64 @@ joints Robot::getLegJoints(int n)
 
     joints x = legs[n].getJoints();
 
-    Rx = (Mat_<float>(3,3) << 1, 0, 0, 0, cos(angles.x), -sin(angles.x), 0, sin(angles.x), cos(angles.x));
-    Ry = (Mat_<float>(3,3) << cos(angles.y), 0, sin(angles.y), 0, 1, 0, -sin(angles.y), 0, cos(angles.y));
-    Rz = (Mat_<float>(3,3) << cos(angles.z), -sin(angles.z), 0, sin(angles.z), cos(angles.z), 0, 0, 0, 1);
+    Rx = arma::Mat<float>( { {1, 0, 0},
+                             {0, cos(angles.x), -sin(angles.x)},
+                             {0, sin(angles.x), cos(angles.z)} } );
+    Rz = arma::Mat<float>( { {cos(angles.y), 0, sin(angles.y)},
+                             {0, 1, 0},
+                             {-sin(angles.y), 0, cos(angles.y)} } );
+    Rz = arma::Mat<float>( { {cos(angles.z), -sin(angles.z), 0},
+                             {sin(angles.z), cos(angles.z), 0},
+                             {0, 0, 1} } );
 
     R = Rz*Ry*Rx;
 
-    Mat P1 = (Mat_<float>(3,1) << x.A.x, x.A.y, x.A.z);
-    Mat P2 = (Mat_<float>(3,1) << x.B.x, x.B.y, x.B.z);
-    Mat P3 = (Mat_<float>(3,1) << x.C.x, x.C.y, x.C.z);
-    Mat P4 = (Mat_<float>(3,1) << x.D.x, x.D.y, x.D.z);
+    arma::fmat P1 = arma::Mat<float>( { {x.A.x, x.A.y, x.A.z} } );
+    arma::fmat P2 = arma::Mat<float>( { {x.B.x, x.B.y, x.B.z} } );
+    arma::fmat P3 = arma::Mat<float>( { {x.C.x, x.C.y, x.C.z} } );
+    arma::fmat P4 = arma::Mat<float>( { {x.D.x, x.D.y, x.D.z} } );
 
-    Mat P11 = R*P1;
-    Mat P22 = R*P2;
-    Mat P33 = R*P3;
-    Mat P44 = R*P4;
+    arma::fmat P11 = R*P1;
+    arma::fmat  P22 = R*P2;
+    arma::fmat  P33 = R*P3;
+    arma::fmat  P44 = R*P4;
 
-    x.A = Point3f(P11.at<float>(0,0), P11.at<float>(0,1), P11.at<float>(0,2)) + position;
-    x.B = Point3f(P22.at<float>(0,0), P22.at<float>(0,1), P22.at<float>(0,2)) + position;
-    x.C = Point3f(P33.at<float>(0,0), P33.at<float>(0,1), P33.at<float>(0,2)) + position;
-    x.D = Point3f(P44.at<float>(0,0), P44.at<float>(0,1), P44.at<float>(0,2)) + position;
+    x.A = Point3f(P11(0,0), P11(0,1), P11(0,2)) + position;
+    x.B = Point3f(P22(0,0), P22(0,1), P22(0,2)) + position;
+    x.C = Point3f(P33(0,0), P33(0,1), P33(0,2)) + position;
+    x.D = Point3f(P44(0,0), P44(0,1), P44(0,2)) + position;
 
     return x;
 }
 
 rect Robot::getFrame()
 {
-    Rx = (Mat_<float>(3,3) << 1, 0, 0, 0, cos(angles.x), -sin(angles.x), 0, sin(angles.x), cos(angles.x));
-    Ry = (Mat_<float>(3,3) << cos(angles.y), 0, sin(angles.y), 0, 1, 0, -sin(angles.y), 0, cos(angles.y));
-    Rz = (Mat_<float>(3,3) << cos(angles.z), -sin(angles.z), 0, sin(angles.z), cos(angles.z), 0, 0, 0, 1);
+    Rx = arma::Mat<float>( { {1, 0, 0},
+                             {0, cos(angles.x), -sin(angles.x)},
+                             {0, sin(angles.x), cos(angles.x)} } );
+    Ry = arma::Mat<float>( { {cos(angles.y), 0, sin(angles.y)},
+                             {0, 1, 0},
+                             {-sin(angles.y), 0, cos(angles.y)} } );
+    Rz = arma::Mat<float>( { {cos(angles.z), -sin(angles.z), 0},
+                             {sin(angles.z), cos(angles.z), 0},
+                             {0, 0, 1} } );
 
     R = Rz*Ry*Rx;
 
-    Mat P1 = (Mat_<float>(3,1) << - width/2, 0, - length/2);
-    Mat P2 = (Mat_<float>(3,1) << width/2, 0, - length/2);
-    Mat P3 = (Mat_<float>(3,1) << - width/2, 0, length/2);
-    Mat P4 = (Mat_<float>(3,1) << width/2, 0, length/2);
+    arma::fmat P1 = arma::Mat<float>( { {-width/2, 0, -length/2} } );
+    arma::fmat P2 = arma::Mat<float>( { {width/2, 0, -length/2} } );
+    arma::fmat P3 = arma::Mat<float>( { {-width/2, 0, length/2} } );
+    arma::fmat P4 = arma::Mat<float>( { {width/2, 0, length/2} } );
 
-    Mat P11 = R*P1;
-    Mat P22 = R*P2;
-    Mat P33 = R*P3;
-    Mat P44 = R*P4;
+    arma::fmat P11 = R*P1;
+    arma::fmat P22 = R*P2;
+    arma::fmat P33 = R*P3;
+    arma::fmat P44 = R*P4;
 
-    gFrame.dl = Point3f(P11.at<float>(0,0), P11.at<float>(0,1), P11.at<float>(0,2)) + position;
-    gFrame.dr = Point3f(P22.at<float>(0,0), P22.at<float>(0,1), P22.at<float>(0,2)) + position;
-    gFrame.ul = Point3f(P33.at<float>(0,0), P33.at<float>(0,1), P33.at<float>(0,2)) + position;
-    gFrame.ur = Point3f(P44.at<float>(0,0), P44.at<float>(0,1), P44.at<float>(0,2)) + position;
+    gFrame.dl = Point3f(P11(0,0), P11(0,1), P11(0,2)) + position;
+    gFrame.dr = Point3f(P22(0,0), P22(0,1), P22(0,2)) + position;
+    gFrame.ul = Point3f(P33(0,0), P33(0,1), P33(0,2)) + position;
+    gFrame.ur = Point3f(P44(0,0), P44(0,1), P44(0,2)) + position;
 
     return gFrame;
 }
@@ -134,35 +145,48 @@ void Robot::moveCoordinates(Point3f p, Point3f ang)
 {
     angles += ang;
 
-    ang = -ang;
+    ang = ang * -1;
 
-    Rx = (Mat_<float>(3,3) << 1, 0, 0, 0, cos(ang.x), -sin(ang.x), 0, sin(ang.x), cos(ang.x));
-    Ry = (Mat_<float>(3,3) << cos(ang.y), 0, sin(ang.y), 0, 1, 0, -sin(ang.y), 0, cos(ang.y));
-    Rz = (Mat_<float>(3,3) << cos(ang.z), -sin(ang.z), 0, sin(ang.z), cos(ang.z), 0, 0, 0, 1);
+    Rx = arma::Mat<float>( { {1, 0, 0},
+                             {0, cos(angles.x), -sin(angles.x)},
+                             {0, sin(angles.x), cos(angles.x)} } );
+    Ry = arma::Mat<float>( { {cos(angles.y), 0, sin(angles.y)},
+                             {0, 1, 0},
+                             {-sin(angles.y), 0, cos(angles.y)} } );
+    Rz = arma::Mat<float>( { {cos(angles.z), -sin(angles.z), 0},
+                             {sin(angles.z), cos(angles.z), 0},
+                             {0, 0, 1} } );
 
     R = Rz*Ry*Rx;
 
     joints x;
 
-    Mat P1, P11;
+    arma::fmat P1, P11;
 
     for(int i = 0; i < 6; ++i)
     {
         x = legs[i].getJoints();
-        P1 = (Mat_<float>(3,1) << x.D.x, x.D.y, x.D.z);
+        P1 = arma::Mat<float>( { {x.D.x, x.D.y, x.D.z} } );
         P11 = R*P1;
-        x.D = Point3f(P11.at<float>(0,0), P11.at<float>(0,1), P11.at<float>(0,2)) - p;
+        x.D = Point3f(P11(0,0), P11(0,1), P11(0,2)) - p;
         legs[i].setLegEnd(x.D);
         legs[i].calculateAngles();
     }
-    Rx = (Mat_<float>(3,3) << 1, 0, 0, 0, cos(angles.x), -sin(angles.x), 0, sin(angles.x), cos(angles.x));
-    Ry = (Mat_<float>(3,3) << cos(angles.y), 0, sin(angles.y), 0, 1, 0, -sin(angles.y), 0, cos(angles.y));
-    Rz = (Mat_<float>(3,3) << cos(angles.z), -sin(angles.z), 0, sin(angles.z), cos(angles.z), 0, 0, 0, 1);
+    Rx = arma::Mat<float>( { {1, 0, 0},
+                             {0, cos(angles.x), -sin(angles.x)},
+                             {0, sin(angles.x), cos(angles.x)} } );
+    Ry = arma::Mat<float>( { {cos(angles.y), 0, sin(angles.y)},
+                             {0, 1, 0},
+                             {-sin(angles.y), 0, cos(angles.y)} } );
+    Rz = arma::Mat<float>( { {cos(angles.z), -sin(angles.z), 0},
+                             {sin(angles.z), cos(angles.z), 0},
+                             {0, 0, 1} } );
 
     R = Rz*Ry*Rx;
-    P1 = (Mat_<float>(3,1) << p.x, p.y, p.z);
+
+    P1 = arma::Mat<float>( { {p.x, p.y, p.z} } );
     P11 = R*P1;
-    p = Point3f(P11.at<float>(0,0), P11.at<float>(0,1), P11.at<float>(0,2));
+    p = Point3f(P11(0,0), P11(0,1), P11(0,2));
     position += p;
 }
 

@@ -1,4 +1,4 @@
-#include "Robot/robotwalk.h"
+#include "src/Robot/robotwalk.h"
 //#include <opencv2/highgui/highgui.hpp>
 #include <iostream>
 #include <chrono>
@@ -290,16 +290,18 @@ void RobotWalk::walk(Point3f steps, Robot& rob)
 
 void RobotWalk::rotation(float angle, Robot& rob)
 {
-    Mat Rx1;
+    arma::fmat Rx1;
     double da;
     Point3d steps1, steps2;
     Point3d g11, g12;
-    Mat P1, P11;
+    arma::dmat P1, P11;
     double x,z;
     Point3f step1;
     double j=0;
 
-    Rx1 = (Mat_<double>(3,3) << cos(angle), 0, sin(angle), 0, 1, 0, -sin(angle), 0, cos(angle));
+    Rx1 = arma::Mat<float>( { {cos(angle), 0, sin(angle)},
+                               {0, 1, 0},
+                               {-sin(angle), 0, cos(angle)} } );
     da = 0.01;
     da = (angle<0)?(-da):da;
 
@@ -313,9 +315,9 @@ void RobotWalk::rotation(float angle, Robot& rob)
     for (int i = 0; i < 6; ++i)
     {
         g11 = (rob.getLeg(i).getJoints().D);
-        P1 = (Mat_<double>(3,1) << g11.x, g11.y, g11.z);
+        P1 = arma::Mat<double>( { {g11.x, g11.y, g11.z} } );
         P11 = Rx1*P1;
-        g12 = Point3f(P11.at<double>(0,0), P11.at<double>(0,1), P11.at<double>(0,2));
+        g12 = Point3f(P11(0,0), P11(0,1), P11(0,2));
         steps1 = g12 - g11;
 
         x = steps1.x;
@@ -481,16 +483,18 @@ void RobotWalk::simpleWalk(Point3f step, Robot& rob)
 
 void RobotWalk::simpleRotation(float angle, Robot& rob)
 {
-    Mat Rx1 = (Mat_<float>(3,3) << cos(angle), 0, sin(angle), 0, 1, 0, -sin(angle), 0, cos(angle));
+    arma::dmat Rx1 = arma::Mat<double>( { {cos(angle), 0, sin(angle)},
+                               {0, 1, 0},
+                               {-sin(angle), 0, cos(angle)} } );
 
     if(rotatingSequenceNo == 0)
     {
         for(int i = 0; i < 6; ++i)
         {
             Point3f g11 = (rob.getLeg(i).getJoints().D);
-            Mat P1 = (Mat_<float>(3,1) << g11.x, g11.y, g11.z);
-            Mat P11 = Rx1*P1;
-            Point3f g12 = Point3f(P11.at<float>(0,0), P11.at<float>(0,1), P11.at<float>(0,2));
+            arma::dmat P1 = arma::Mat<double>( { {g11.x, g11.y, g11.z} } );
+            arma::dmat P11 = Rx1*P1;
+            Point3f g12 = Point3f(P11(0,0), P11(0,1), P11(0,2));
             stepsl[i] = g12 - g11;
             stepsl[i].x /= 2;
             stepsl[i].y = -stepHeight;
@@ -525,9 +529,9 @@ void RobotWalk::simpleRotation(float angle, Robot& rob)
         for(int i = 0; i < 6; ++i)
         {
             Point3f g11 = (rob.getLeg(i).getJoints().D);
-            Mat P1 = (Mat_<float>(3,1) << g11.x, g11.y, g11.z);
-            Mat P11 = Rx1*P1;
-            Point3f g12 = Point3f(P11.at<float>(0,0), P11.at<float>(0,1), P11.at<float>(0,2));
+            arma::dmat P1 = arma::Mat<double>( { {g11.x, g11.y, g11.z} } );
+            arma::dmat P11 = Rx1*P1;
+            Point3f g12 = Point3f(P11(0,0), P11(0,1), P11(0,2));
             stepsl[i] = g12 - g11;
             stepsl[i].x /= 2;
             stepsl[i].y = -stepHeight;

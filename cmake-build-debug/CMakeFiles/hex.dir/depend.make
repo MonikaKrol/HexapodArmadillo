@@ -11,18 +11,12 @@ CMakeFiles/hex.dir/src/Robot/leg.cpp.o: ../src/util.h
 CMakeFiles/hex.dir/src/Robot/leg.cpp.o: ../src/Robot/leg.cpp
 
 CMakeFiles/hex.dir/src/Robot/robot.cpp.o: ../src/Robot/Point.h
-CMakeFiles/hex.dir/src/Robot/robot.cpp.o: ../src/maestro.h
-CMakeFiles/hex.dir/src/Robot/robot.cpp.o: ../src/util.h
-CMakeFiles/hex.dir/src/Robot/robot.cpp.o: ../src/Robot/Point.h
 CMakeFiles/hex.dir/src/Robot/robot.cpp.o: ../src/Robot/leg.h
 CMakeFiles/hex.dir/src/Robot/robot.cpp.o: ../src/Robot/robot.h
 CMakeFiles/hex.dir/src/Robot/robot.cpp.o: ../src/maestro.h
 CMakeFiles/hex.dir/src/Robot/robot.cpp.o: ../src/util.h
 CMakeFiles/hex.dir/src/Robot/robot.cpp.o: ../src/Robot/robot.cpp
 
-CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o: ../src/Robot/Point.h
-CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o: ../src/maestro.h
-CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o: ../src/util.h
 CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o: ../src/Robot/Point.h
 CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o: ../src/Robot/leg.h
 CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o: ../src/Robot/robot.h
@@ -32,9 +26,6 @@ CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o: ../src/maestro.h
 CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o: ../src/util.h
 CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o: ../src/Robot/robotcontroler.cpp
 
-CMakeFiles/hex.dir/src/Robot/robotwalk.cpp.o: ../src/Robot/Point.h
-CMakeFiles/hex.dir/src/Robot/robotwalk.cpp.o: ../src/maestro.h
-CMakeFiles/hex.dir/src/Robot/robotwalk.cpp.o: ../src/util.h
 CMakeFiles/hex.dir/src/Robot/robotwalk.cpp.o: ../src/Robot/Point.h
 CMakeFiles/hex.dir/src/Robot/robotwalk.cpp.o: ../src/Robot/leg.h
 CMakeFiles/hex.dir/src/Robot/robotwalk.cpp.o: ../src/Robot/robot.h
@@ -57,9 +48,6 @@ CMakeFiles/hex.dir/src/TCP/tcpstream.cpp.o: ../src/TCP/tcpstream.h
 CMakeFiles/hex.dir/src/maestro.cpp.o: ../src/maestro.cpp
 CMakeFiles/hex.dir/src/maestro.cpp.o: ../src/maestro.h
 
-CMakeFiles/hex.dir/src/main.cpp.o: ../src/Robot/Point.h
-CMakeFiles/hex.dir/src/main.cpp.o: ../src/maestro.h
-CMakeFiles/hex.dir/src/main.cpp.o: ../src/util.h
 CMakeFiles/hex.dir/src/main.cpp.o: ../src/Robot/Point.h
 CMakeFiles/hex.dir/src/main.cpp.o: ../src/Robot/leg.h
 CMakeFiles/hex.dir/src/main.cpp.o: ../src/Robot/robot.h

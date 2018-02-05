@@ -3,10 +3,10 @@
 
 //#include <opencv2/core/core.hpp>
 #include <armadillo>
-#include "util.h"
-#include "Robot/leg.h"
-#include "maestro.h"
-#include "Robot/Point.h"
+#include "src/util.h"
+#include "src/Robot/leg.h"
+#include "src/maestro.h"
+#include "src/Robot/Point.h"
 
 class Robot
 {

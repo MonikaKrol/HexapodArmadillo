@@ -2,8 +2,8 @@
 #define ROBOTWALK_H
 
 //#include <opencv2/core/core.hpp>
-#include <Robot/robot.h>
-#include "Robot/Point.h"
+#include "src/Robot/robot.h"
+#include "src/Robot/Point.h"
 
 class RobotWalk
 {

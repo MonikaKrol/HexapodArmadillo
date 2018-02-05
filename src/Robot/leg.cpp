@@ -64,8 +64,8 @@ int Leg::calculateAngles()
     else
         angles.x = 0;
 
-    angles.y = -(a1+a2-0.5*Datum::pi);
-    angles.z = (Datum::pi - b + angles.y);
+    angles.y = -(a1+a2-0.5*datum::pi);
+    angles.z = (datum::pi - b + angles.y);
 
     relAngles.x = angles.x;
     relAngles.y = angles.y;
@@ -84,11 +84,11 @@ int Leg::calculateAngles()
 
 void Leg::calculateServoSignals()
 {
-    float wspolczynnik = 1000/(Datum::pi/2 - 1.18);//wspolczynnik zamiany katow na sygnaly
+    float wspolczynnik = 1000/(datum::pi/2 - 1.18);//wspolczynnik zamiany katow na sygnaly
     int sygnalA, sygnalB, sygnalC;
     sygnalA = relAngles.x*wspolczynnik + signals.x;
     sygnalB = -relAngles.y*wspolczynnik + signals.y;
-    sygnalC = (Datum::pi/2 -relAngles.z)*wspolczynnik + signals.z;
+    sygnalC = (datum::pi/2 -relAngles.z)*wspolczynnik + signals.z;
 
     if(device)
     {

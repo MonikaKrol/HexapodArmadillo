@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/pi/opencv/opencv/¬/home/pi/opencv/build/include -I/home/pi/opencv/opencv/¬/home/pi/opencv/build/include/opencv2 -I/home/monika/CLionProjects/hexapod/src -I/home/monika/CLionProjects/hexapod 
+CXX_INCLUDES = -I/home/monika/CLionProjects/hexapod 
 
