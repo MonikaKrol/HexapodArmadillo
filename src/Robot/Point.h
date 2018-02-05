@@ -3,6 +3,15 @@
 
 #include <armadillo>
 
+class Point2f
+{
+private:
+    float x;
+    float y;
+public:
+    Point2f(float x, float y);
+};
+
 class Point3f
 {
 private:

@@ -74,7 +74,7 @@ int main()
 
                             cout << x << ' ' << y << endl;
 
-                            rob.walkToPoint(Point(x,y));
+                            rob.walkToPoint(Point2f(x,y));
                         }
 	                }
 	            }

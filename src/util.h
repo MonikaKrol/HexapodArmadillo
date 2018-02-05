@@ -5,12 +5,12 @@
 #include "src/Robot/Point.h"
 //#include <opencv2/core/core.hpp>
 
-struct rect::Point3f
+struct rect
 {
     Point3f ul, ur, dl, dr; //up-left up-right down-left down-right
 };
 
-struct joints::Point3f
+struct joints
 {
     Point3f A,B,C,D;
 };

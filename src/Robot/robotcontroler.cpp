@@ -9,7 +9,7 @@ using namespace std::chrono;
 //using namespace cv;
 using namespace std;
 
-RobotControler::RobotControler(float walkStep1, float rotStep1, float sMoveStep1, float sRotStep1, int delayShort, float stepHeight, cv::Point3f pos, cv::Point3f ang, float width1, float length1, cv::Point3f leglengths)
+RobotControler::RobotControler(float walkStep1, float rotStep1, float sMoveStep1, float sRotStep1, int delayShort, float stepHeight, Point3f pos, Point3f ang, float width1, float length1, Point3f leglengths)
  : rob(pos, ang, width1, length1, leglengths), walker(delayShort, stepHeight)
 {
 	walkStep = walkStep1;
@@ -325,7 +325,7 @@ void RobotControler::rotateBase(char direction)
 	rob.rotate(rotation);
 }
 
-void RobotControler::walkToPoint(cv::Point2f point)
+void RobotControler::walkToPoint(Point2f point)
 {
     float destAngle = atan2(point.y, point.x);
     float differenceAngle = destAngle - rob.getAngles().y;

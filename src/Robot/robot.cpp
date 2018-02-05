@@ -6,7 +6,7 @@
 //using namespace cv;
 using namespace arma;
 
-Robot::Robot::Point3f(Point3f pos, Point3f ang, float width1, float length1, Point3f leglengths)
+Robot::Robot(Point3f pos, Point3f ang, float width1, float length1, Point3f leglengths)
 {
     width = width1;
     length = length1;

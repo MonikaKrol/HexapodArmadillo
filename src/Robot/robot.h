@@ -6,7 +6,7 @@
 #include "util.h"
 #include "Robot/leg.h"
 #include "maestro.h"
-#include "Point.h"
+#include "Robot/Point.h"
 
 class Robot
 {
@@ -14,7 +14,6 @@ class Robot
         rect lFrame, gFrame;// l - lokalne g - globalne
 
         //position and angles of middles point in robots base
-        Point3f = { {float x, float y, float z} };
         Point3f position;
         Point3f angles;
 

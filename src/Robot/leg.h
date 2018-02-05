@@ -9,9 +9,9 @@
 //#include <opencv2/core/core.hpp>
 #include "util.h"
 #include "maestro.h"
-#include "Point.h"
+#include "Robot/Point.h"
 
-class Leg::Point3f::Point3i
+class Leg
 {
     private:
         joints legJoints; //joint A - przy podstawie, nastepne po koleji
@@ -28,7 +28,6 @@ class Leg::Point3f::Point3i
         void calculateJointPoints();
         void calculateServoSignals();
     public:
-        Leg(){};
         Leg(Point3f joint1, Point3f angles1, Point3f lengths1, Point3f signals1);
 
         joints getJoints(){return legJoints;};

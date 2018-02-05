@@ -5,7 +5,7 @@
 #include <Robot/robot.h>
 #include "Robot/Point.h"
 
-class RobotWalk::Point3f
+class RobotWalk
 {
 	private:
 
