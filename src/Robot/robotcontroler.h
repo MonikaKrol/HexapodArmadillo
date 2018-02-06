@@ -1,10 +1,9 @@
 #ifndef ROBOTCONTROLER_H
 #define ROBOTCONTROLER_H
 
-//#include <opencv2/core/core.hpp>
 #include "src/Robot/robot.h"
 #include "src/Robot/robotwalk.h"
-#include "src/Robot/Point.h"
+#include "src/Robot/point.h"
 
 class RobotControler
 {

@@ -6,8 +6,7 @@
 ///https://oscarliang.com/inverse-kinematics-implementation-hexapod-robots/
 
 #include <armadillo>
-//#include <opencv2/core/core.hpp>
-#include "src/Robot/Point.h"
+#include "src/Robot/point.h"
 #include "src/util.h"
 #include "src/maestro.h"
 

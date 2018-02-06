@@ -86,16 +86,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/monika/CLionProjects/hexapod11/src/Robot/Point.cpp">
-			<Option target="hex"/>
-		</Unit>
-		<Unit filename="/home/monika/CLionProjects/hexapod11/src/Robot/Point.h">
-			<Option target="hex"/>
-		</Unit>
 		<Unit filename="/home/monika/CLionProjects/hexapod11/src/Robot/leg.cpp">
 			<Option target="hex"/>
 		</Unit>
 		<Unit filename="/home/monika/CLionProjects/hexapod11/src/Robot/leg.h">
+			<Option target="hex"/>
+		</Unit>
+		<Unit filename="/home/monika/CLionProjects/hexapod11/src/Robot/point.cpp">
+			<Option target="hex"/>
+		</Unit>
+		<Unit filename="/home/monika/CLionProjects/hexapod11/src/Robot/point.h">
 			<Option target="hex"/>
 		</Unit>
 		<Unit filename="/home/monika/CLionProjects/hexapod11/src/Robot/robot.cpp">

@@ -3,9 +3,12 @@ project( hex )
 
 set(CMAKE_CXX_STANDARD 11)
 
+find_package( Armadillo REQUIRED )
+include_directories( ${ARMADILLO_INCLUDE_DIRS} )
+
 set(SOURCES
 		src/main.cpp
-		src/Robot/Point.h src/Robot/Point.cpp
+		src/Robot/point.h src/Robot/point.cpp
 		src/Robot/leg.h	src/Robot/leg.cpp
 		src/Robot/robot.h src/Robot/robot.cpp
 		src/Robot/robotcontroler.h src/Robot/robotcontroler.cpp

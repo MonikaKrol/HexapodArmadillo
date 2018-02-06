@@ -1,5 +1,3 @@
-//#include <opencv2/core/core.hpp>
-//#include <opencv2/highgui/highgui.hpp>
 #define ARMA_DONT_USE_WRAPPER
 #include <armadillo>
 #include <iostream>
@@ -9,8 +7,6 @@
 #include "Robot/robotcontroler.h"
 
 using namespace std;
-//using namespace cv;
-
 
 int main()
 {

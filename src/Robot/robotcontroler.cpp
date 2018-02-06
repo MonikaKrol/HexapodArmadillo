@@ -2,11 +2,9 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
-//#include <opencv2/highgui/highgui.hpp>
 
 using namespace std::this_thread;
 using namespace std::chrono;
-//using namespace cv;
 using namespace std;
 
 RobotControler::RobotControler(float walkStep1, float rotStep1, float sMoveStep1, float sRotStep1, int delayShort, float stepHeight, Point3f pos, Point3f ang, float width1, float length1, Point3f leglengths)

@@ -1,5 +1,4 @@
 #include "src/Robot/robotwalk.h"
-//#include <opencv2/highgui/highgui.hpp>
 #include <iostream>
 #include <chrono>
 #include <thread>

@@ -1,12 +1,11 @@
 #ifndef ROBOT_H
 #define ROBOT_H
 
-//#include <opencv2/core/core.hpp>
 #include <armadillo>
 #include "src/util.h"
 #include "src/Robot/leg.h"
 #include "src/maestro.h"
-#include "src/Robot/Point.h"
+#include "src/Robot/point.h"
 
 class Robot
 {

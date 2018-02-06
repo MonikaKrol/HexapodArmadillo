@@ -123,33 +123,6 @@ hex/fast:
 	$(MAKE) -f CMakeFiles/hex.dir/build.make CMakeFiles/hex.dir/build
 .PHONY : hex/fast
 
-src/Robot/Point.o: src/Robot/Point.cpp.o
-
-.PHONY : src/Robot/Point.o
-
-# target to build an object file
-src/Robot/Point.cpp.o:
-	$(MAKE) -f CMakeFiles/hex.dir/build.make CMakeFiles/hex.dir/src/Robot/Point.cpp.o
-.PHONY : src/Robot/Point.cpp.o
-
-src/Robot/Point.i: src/Robot/Point.cpp.i
-
-.PHONY : src/Robot/Point.i
-
-# target to preprocess a source file
-src/Robot/Point.cpp.i:
-	$(MAKE) -f CMakeFiles/hex.dir/build.make CMakeFiles/hex.dir/src/Robot/Point.cpp.i
-.PHONY : src/Robot/Point.cpp.i
-
-src/Robot/Point.s: src/Robot/Point.cpp.s
-
-.PHONY : src/Robot/Point.s
-
-# target to generate assembly for a file
-src/Robot/Point.cpp.s:
-	$(MAKE) -f CMakeFiles/hex.dir/build.make CMakeFiles/hex.dir/src/Robot/Point.cpp.s
-.PHONY : src/Robot/Point.cpp.s
-
 src/Robot/leg.o: src/Robot/leg.cpp.o
 
 .PHONY : src/Robot/leg.o
@@ -176,6 +149,33 @@ src/Robot/leg.s: src/Robot/leg.cpp.s
 src/Robot/leg.cpp.s:
 	$(MAKE) -f CMakeFiles/hex.dir/build.make CMakeFiles/hex.dir/src/Robot/leg.cpp.s
 .PHONY : src/Robot/leg.cpp.s
+
+src/Robot/point.o: src/Robot/point.cpp.o
+
+.PHONY : src/Robot/point.o
+
+# target to build an object file
+src/Robot/point.cpp.o:
+	$(MAKE) -f CMakeFiles/hex.dir/build.make CMakeFiles/hex.dir/src/Robot/point.cpp.o
+.PHONY : src/Robot/point.cpp.o
+
+src/Robot/point.i: src/Robot/point.cpp.i
+
+.PHONY : src/Robot/point.i
+
+# target to preprocess a source file
+src/Robot/point.cpp.i:
+	$(MAKE) -f CMakeFiles/hex.dir/build.make CMakeFiles/hex.dir/src/Robot/point.cpp.i
+.PHONY : src/Robot/point.cpp.i
+
+src/Robot/point.s: src/Robot/point.cpp.s
+
+.PHONY : src/Robot/point.s
+
+# target to generate assembly for a file
+src/Robot/point.cpp.s:
+	$(MAKE) -f CMakeFiles/hex.dir/build.make CMakeFiles/hex.dir/src/Robot/point.cpp.s
+.PHONY : src/Robot/point.cpp.s
 
 src/Robot/robot.o: src/Robot/robot.cpp.o
 
@@ -402,12 +402,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... hex"
-	@echo "... src/Robot/Point.o"
-	@echo "... src/Robot/Point.i"
-	@echo "... src/Robot/Point.s"
 	@echo "... src/Robot/leg.o"
 	@echo "... src/Robot/leg.i"
 	@echo "... src/Robot/leg.s"
+	@echo "... src/Robot/point.o"
+	@echo "... src/Robot/point.i"
+	@echo "... src/Robot/point.s"
 	@echo "... src/Robot/robot.o"
 	@echo "... src/Robot/robot.i"
 	@echo "... src/Robot/robot.s"

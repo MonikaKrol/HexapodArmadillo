@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-..//src/Robot/Point.h
-armadillo
--
-
 ..//src/Robot/leg.h
 armadillo
 -
-src/Robot/Point.h
-../src/Robot/src/Robot/Point.h
+src/Robot/point.h
+../src/Robot/src/Robot/point.h
 src/util.h
 ../src/Robot/src/util.h
 src/maestro.h
 ../src/Robot/src/maestro.h
+
+..//src/Robot/point.h
+armadillo
+-
 
 ..//src/Robot/robot.h
 armadillo
@@ -29,22 +29,22 @@ src/Robot/leg.h
 ../src/Robot/src/Robot/leg.h
 src/maestro.h
 ../src/Robot/src/maestro.h
-src/Robot/Point.h
-../src/Robot/src/Robot/Point.h
+src/Robot/point.h
+../src/Robot/src/Robot/point.h
 
 ..//src/Robot/robotcontroler.h
 src/Robot/robot.h
 ../src/Robot/src/Robot/robot.h
 src/Robot/robotwalk.h
 ../src/Robot/src/Robot/robotwalk.h
-src/Robot/Point.h
-../src/Robot/src/Robot/Point.h
+src/Robot/point.h
+../src/Robot/src/Robot/point.h
 
 ..//src/Robot/robotwalk.h
 src/Robot/robot.h
 ../src/Robot/src/Robot/robot.h
-src/Robot/Point.h
-../src/Robot/src/Robot/Point.h
+src/Robot/point.h
+../src/Robot/src/Robot/point.h
 
 ..//src/maestro.h
 termios.h
@@ -53,22 +53,22 @@ termios.h
 ..//src/util.h
 armadillo
 -
-src/Robot/Point.h
-../src/src/Robot/Point.h
-
-/home/monika/CLionProjects/hexapod11/src/Robot/Point.cpp
-armadillo
--
-Point.h
-/home/monika/CLionProjects/hexapod11/src/Robot/Point.h
-
-/home/monika/CLionProjects/hexapod11/src/Robot/Point.h
-armadillo
--
+src/Robot/point.h
+../src/src/Robot/point.h
 
 /home/monika/CLionProjects/hexapod11/src/Robot/leg.cpp
 src/Robot/leg.h
 /home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/leg.h
+
+/home/monika/CLionProjects/hexapod11/src/Robot/point.cpp
+armadillo
+-
+point.h
+/home/monika/CLionProjects/hexapod11/src/Robot/point.h
+
+/home/monika/CLionProjects/hexapod11/src/Robot/point.h
+armadillo
+-
 
 /home/monika/CLionProjects/hexapod11/src/Robot/robot.cpp
 src/Robot/robot.h
@@ -77,8 +77,8 @@ unistd.h
 -
 armadillo
 -
-src/Robot/Point.h
-/home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/Point.h
+src/Robot/point.h
+/home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/point.h
 
 /home/monika/CLionProjects/hexapod11/src/Robot/robotcontroler.cpp
 src/Robot/robotcontroler.h
@@ -95,8 +95,8 @@ src/Robot/robot.h
 /home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/robot.h
 src/Robot/robotwalk.h
 /home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/robotwalk.h
-src/Robot/Point.h
-/home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/Point.h
+src/Robot/point.h
+/home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/point.h
 
 /home/monika/CLionProjects/hexapod11/src/Robot/robotwalk.cpp
 src/Robot/robotwalk.h

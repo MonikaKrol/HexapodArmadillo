@@ -81,28 +81,28 @@ CMakeFiles/hex.dir/src/main.cpp.o.provides: CMakeFiles/hex.dir/src/main.cpp.o.re
 CMakeFiles/hex.dir/src/main.cpp.o.provides.build: CMakeFiles/hex.dir/src/main.cpp.o
 
 
-CMakeFiles/hex.dir/src/Robot/Point.cpp.o: CMakeFiles/hex.dir/flags.make
-CMakeFiles/hex.dir/src/Robot/Point.cpp.o: ../src/Robot/Point.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/monika/CLionProjects/hexapod11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hex.dir/src/Robot/Point.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hex.dir/src/Robot/Point.cpp.o -c /home/monika/CLionProjects/hexapod11/src/Robot/Point.cpp
+CMakeFiles/hex.dir/src/Robot/point.cpp.o: CMakeFiles/hex.dir/flags.make
+CMakeFiles/hex.dir/src/Robot/point.cpp.o: ../src/Robot/point.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/monika/CLionProjects/hexapod11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hex.dir/src/Robot/point.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hex.dir/src/Robot/point.cpp.o -c /home/monika/CLionProjects/hexapod11/src/Robot/point.cpp
 
-CMakeFiles/hex.dir/src/Robot/Point.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hex.dir/src/Robot/Point.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/monika/CLionProjects/hexapod11/src/Robot/Point.cpp > CMakeFiles/hex.dir/src/Robot/Point.cpp.i
+CMakeFiles/hex.dir/src/Robot/point.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hex.dir/src/Robot/point.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/monika/CLionProjects/hexapod11/src/Robot/point.cpp > CMakeFiles/hex.dir/src/Robot/point.cpp.i
 
-CMakeFiles/hex.dir/src/Robot/Point.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hex.dir/src/Robot/Point.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/monika/CLionProjects/hexapod11/src/Robot/Point.cpp -o CMakeFiles/hex.dir/src/Robot/Point.cpp.s
+CMakeFiles/hex.dir/src/Robot/point.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hex.dir/src/Robot/point.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/monika/CLionProjects/hexapod11/src/Robot/point.cpp -o CMakeFiles/hex.dir/src/Robot/point.cpp.s
 
-CMakeFiles/hex.dir/src/Robot/Point.cpp.o.requires:
+CMakeFiles/hex.dir/src/Robot/point.cpp.o.requires:
 
-.PHONY : CMakeFiles/hex.dir/src/Robot/Point.cpp.o.requires
+.PHONY : CMakeFiles/hex.dir/src/Robot/point.cpp.o.requires
 
-CMakeFiles/hex.dir/src/Robot/Point.cpp.o.provides: CMakeFiles/hex.dir/src/Robot/Point.cpp.o.requires
-	$(MAKE) -f CMakeFiles/hex.dir/build.make CMakeFiles/hex.dir/src/Robot/Point.cpp.o.provides.build
-.PHONY : CMakeFiles/hex.dir/src/Robot/Point.cpp.o.provides
+CMakeFiles/hex.dir/src/Robot/point.cpp.o.provides: CMakeFiles/hex.dir/src/Robot/point.cpp.o.requires
+	$(MAKE) -f CMakeFiles/hex.dir/build.make CMakeFiles/hex.dir/src/Robot/point.cpp.o.provides.build
+.PHONY : CMakeFiles/hex.dir/src/Robot/point.cpp.o.provides
 
-CMakeFiles/hex.dir/src/Robot/Point.cpp.o.provides.build: CMakeFiles/hex.dir/src/Robot/Point.cpp.o
+CMakeFiles/hex.dir/src/Robot/point.cpp.o.provides.build: CMakeFiles/hex.dir/src/Robot/point.cpp.o
 
 
 CMakeFiles/hex.dir/src/Robot/leg.cpp.o: CMakeFiles/hex.dir/flags.make
@@ -300,7 +300,7 @@ CMakeFiles/hex.dir/src/TCP/tcpstream.cpp.o.provides.build: CMakeFiles/hex.dir/sr
 # Object files for target hex
 hex_OBJECTS = \
 "CMakeFiles/hex.dir/src/main.cpp.o" \
-"CMakeFiles/hex.dir/src/Robot/Point.cpp.o" \
+"CMakeFiles/hex.dir/src/Robot/point.cpp.o" \
 "CMakeFiles/hex.dir/src/Robot/leg.cpp.o" \
 "CMakeFiles/hex.dir/src/Robot/robot.cpp.o" \
 "CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o" \
@@ -314,7 +314,7 @@ hex_OBJECTS = \
 hex_EXTERNAL_OBJECTS =
 
 hex: CMakeFiles/hex.dir/src/main.cpp.o
-hex: CMakeFiles/hex.dir/src/Robot/Point.cpp.o
+hex: CMakeFiles/hex.dir/src/Robot/point.cpp.o
 hex: CMakeFiles/hex.dir/src/Robot/leg.cpp.o
 hex: CMakeFiles/hex.dir/src/Robot/robot.cpp.o
 hex: CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o
@@ -324,6 +324,7 @@ hex: CMakeFiles/hex.dir/src/TCP/tcpconnector.cpp.o
 hex: CMakeFiles/hex.dir/src/TCP/tcpacceptor.cpp.o
 hex: CMakeFiles/hex.dir/src/TCP/tcpstream.cpp.o
 hex: CMakeFiles/hex.dir/build.make
+hex: /usr/lib/x86_64-linux-gnu/libarmadillo.so
 hex: CMakeFiles/hex.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/monika/CLionProjects/hexapod11/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable hex"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hex.dir/link.txt --verbose=$(VERBOSE)
@@ -334,7 +335,7 @@ CMakeFiles/hex.dir/build: hex
 .PHONY : CMakeFiles/hex.dir/build
 
 CMakeFiles/hex.dir/requires: CMakeFiles/hex.dir/src/main.cpp.o.requires
-CMakeFiles/hex.dir/requires: CMakeFiles/hex.dir/src/Robot/Point.cpp.o.requires
+CMakeFiles/hex.dir/requires: CMakeFiles/hex.dir/src/Robot/point.cpp.o.requires
 CMakeFiles/hex.dir/requires: CMakeFiles/hex.dir/src/Robot/leg.cpp.o.requires
 CMakeFiles/hex.dir/requires: CMakeFiles/hex.dir/src/Robot/robot.cpp.o.requires
 CMakeFiles/hex.dir/requires: CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o.requires

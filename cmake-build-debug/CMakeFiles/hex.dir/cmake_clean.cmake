@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hex.dir/src/main.cpp.o"
-  "CMakeFiles/hex.dir/src/Robot/Point.cpp.o"
+  "CMakeFiles/hex.dir/src/Robot/point.cpp.o"
   "CMakeFiles/hex.dir/src/Robot/leg.cpp.o"
   "CMakeFiles/hex.dir/src/Robot/robot.cpp.o"
   "CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o"

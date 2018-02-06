@@ -1,5 +1,5 @@
 #include <armadillo>
-#include "Point.h"
+#include "point.h"
 
 Point2f::Point2f(float _x, float _y) {
     x = _x;

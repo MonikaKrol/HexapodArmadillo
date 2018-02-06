@@ -1,11 +1,7 @@
 #include "src/Robot/robot.h"
-//#include <opencv2/highgui/highgui.hpp>
 #include <unistd.h>
 #include <armadillo>
-#include "src/Robot/Point.h"
-
-//using namespace cv;
-using namespace arma;
+#include "src/Robot/point.h"
 
 Robot::Robot(Point3f pos, Point3f ang, float width1, float length1, Point3f leglengths)
 {
@@ -38,7 +34,7 @@ void Robot::restart(Point3f pos, Point3f ang)
     for(int i = 0; i < 3; ++i)
         legs[i].setR((arma::Mat<float>( { {1, 0, 0}, {0, 1, 0}, {0, 0, 1} } )));
 
-    Point3f ang1(0.0 ,0.0 ,datum::pi/2);
+    Point3f ang1(0.0 ,0.0 ,arma::datum::pi/2);
 
     legs[0].setJointA(lFrame.ur);
     legs[0].setSignals(Point3f(5900,5140,4960));
