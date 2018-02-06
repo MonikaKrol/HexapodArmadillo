@@ -27,7 +27,7 @@ int main()
     float stepHeight = 4;
 
     RobotControler rob(walkStep, rotStep, sMoveStep, sRotStep, delayShort, stepHeight, robotPosition, robotAngles, robotWidth, robotLength, robotLegLenghts);
-
+/*
     ///Tryby:
     ///1 - stanie w miejscu i ruch translacyjny
     ///2 - stanie w miejscu i obroty
@@ -78,6 +78,6 @@ int main()
 	        }
             delete stream;
         }
-    }
+    }*/
     return 0;
 }
