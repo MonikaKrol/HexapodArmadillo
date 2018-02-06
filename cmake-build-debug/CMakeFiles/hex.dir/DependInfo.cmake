@@ -4,16 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/monika/CLionProjects/hexapod/src/Robot/Point.cpp" "/home/monika/CLionProjects/hexapod/cmake-build-debug/CMakeFiles/hex.dir/src/Robot/Point.cpp.o"
-  "/home/monika/CLionProjects/hexapod/src/Robot/leg.cpp" "/home/monika/CLionProjects/hexapod/cmake-build-debug/CMakeFiles/hex.dir/src/Robot/leg.cpp.o"
-  "/home/monika/CLionProjects/hexapod/src/Robot/robot.cpp" "/home/monika/CLionProjects/hexapod/cmake-build-debug/CMakeFiles/hex.dir/src/Robot/robot.cpp.o"
-  "/home/monika/CLionProjects/hexapod/src/Robot/robotcontroler.cpp" "/home/monika/CLionProjects/hexapod/cmake-build-debug/CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o"
-  "/home/monika/CLionProjects/hexapod/src/Robot/robotwalk.cpp" "/home/monika/CLionProjects/hexapod/cmake-build-debug/CMakeFiles/hex.dir/src/Robot/robotwalk.cpp.o"
-  "/home/monika/CLionProjects/hexapod/src/TCP/tcpacceptor.cpp" "/home/monika/CLionProjects/hexapod/cmake-build-debug/CMakeFiles/hex.dir/src/TCP/tcpacceptor.cpp.o"
-  "/home/monika/CLionProjects/hexapod/src/TCP/tcpconnector.cpp" "/home/monika/CLionProjects/hexapod/cmake-build-debug/CMakeFiles/hex.dir/src/TCP/tcpconnector.cpp.o"
-  "/home/monika/CLionProjects/hexapod/src/TCP/tcpstream.cpp" "/home/monika/CLionProjects/hexapod/cmake-build-debug/CMakeFiles/hex.dir/src/TCP/tcpstream.cpp.o"
-  "/home/monika/CLionProjects/hexapod/src/maestro.cpp" "/home/monika/CLionProjects/hexapod/cmake-build-debug/CMakeFiles/hex.dir/src/maestro.cpp.o"
-  "/home/monika/CLionProjects/hexapod/src/main.cpp" "/home/monika/CLionProjects/hexapod/cmake-build-debug/CMakeFiles/hex.dir/src/main.cpp.o"
+  "/home/monika/CLionProjects/hexapod11/src/Robot/Point.cpp" "/home/monika/CLionProjects/hexapod11/cmake-build-debug/CMakeFiles/hex.dir/src/Robot/Point.cpp.o"
+  "/home/monika/CLionProjects/hexapod11/src/Robot/leg.cpp" "/home/monika/CLionProjects/hexapod11/cmake-build-debug/CMakeFiles/hex.dir/src/Robot/leg.cpp.o"
+  "/home/monika/CLionProjects/hexapod11/src/Robot/robot.cpp" "/home/monika/CLionProjects/hexapod11/cmake-build-debug/CMakeFiles/hex.dir/src/Robot/robot.cpp.o"
+  "/home/monika/CLionProjects/hexapod11/src/Robot/robotcontroler.cpp" "/home/monika/CLionProjects/hexapod11/cmake-build-debug/CMakeFiles/hex.dir/src/Robot/robotcontroler.cpp.o"
+  "/home/monika/CLionProjects/hexapod11/src/Robot/robotwalk.cpp" "/home/monika/CLionProjects/hexapod11/cmake-build-debug/CMakeFiles/hex.dir/src/Robot/robotwalk.cpp.o"
+  "/home/monika/CLionProjects/hexapod11/src/TCP/tcpacceptor.cpp" "/home/monika/CLionProjects/hexapod11/cmake-build-debug/CMakeFiles/hex.dir/src/TCP/tcpacceptor.cpp.o"
+  "/home/monika/CLionProjects/hexapod11/src/TCP/tcpconnector.cpp" "/home/monika/CLionProjects/hexapod11/cmake-build-debug/CMakeFiles/hex.dir/src/TCP/tcpconnector.cpp.o"
+  "/home/monika/CLionProjects/hexapod11/src/TCP/tcpstream.cpp" "/home/monika/CLionProjects/hexapod11/cmake-build-debug/CMakeFiles/hex.dir/src/TCP/tcpstream.cpp.o"
+  "/home/monika/CLionProjects/hexapod11/src/maestro.cpp" "/home/monika/CLionProjects/hexapod11/cmake-build-debug/CMakeFiles/hex.dir/src/maestro.cpp.o"
+  "/home/monika/CLionProjects/hexapod11/src/main.cpp" "/home/monika/CLionProjects/hexapod11/cmake-build-debug/CMakeFiles/hex.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

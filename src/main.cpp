@@ -1,5 +1,6 @@
 //#include <opencv2/core/core.hpp>
 //#include <opencv2/highgui/highgui.hpp>
+#define ARMA_DONT_USE_WRAPPER
 #include <armadillo>
 #include <iostream>
 #include <stdio.h>

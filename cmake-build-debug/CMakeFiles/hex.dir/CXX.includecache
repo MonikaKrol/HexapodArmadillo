@@ -56,33 +56,33 @@ armadillo
 src/Robot/Point.h
 ../src/src/Robot/Point.h
 
-/home/monika/CLionProjects/hexapod/src/Robot/Point.cpp
+/home/monika/CLionProjects/hexapod11/src/Robot/Point.cpp
 armadillo
 -
 Point.h
-/home/monika/CLionProjects/hexapod/src/Robot/Point.h
+/home/monika/CLionProjects/hexapod11/src/Robot/Point.h
 
-/home/monika/CLionProjects/hexapod/src/Robot/Point.h
+/home/monika/CLionProjects/hexapod11/src/Robot/Point.h
 armadillo
 -
 
-/home/monika/CLionProjects/hexapod/src/Robot/leg.cpp
+/home/monika/CLionProjects/hexapod11/src/Robot/leg.cpp
 src/Robot/leg.h
-/home/monika/CLionProjects/hexapod/src/Robot/src/Robot/leg.h
+/home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/leg.h
 
-/home/monika/CLionProjects/hexapod/src/Robot/robot.cpp
+/home/monika/CLionProjects/hexapod11/src/Robot/robot.cpp
 src/Robot/robot.h
-/home/monika/CLionProjects/hexapod/src/Robot/src/Robot/robot.h
+/home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/robot.h
 unistd.h
 -
 armadillo
 -
 src/Robot/Point.h
-/home/monika/CLionProjects/hexapod/src/Robot/src/Robot/Point.h
+/home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/Point.h
 
-/home/monika/CLionProjects/hexapod/src/Robot/robotcontroler.cpp
+/home/monika/CLionProjects/hexapod11/src/Robot/robotcontroler.cpp
 src/Robot/robotcontroler.h
-/home/monika/CLionProjects/hexapod/src/Robot/src/Robot/robotcontroler.h
+/home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/robotcontroler.h
 iostream
 -
 chrono
@@ -90,17 +90,17 @@ chrono
 thread
 -
 
-/home/monika/CLionProjects/hexapod/src/Robot/robotcontroler.h
+/home/monika/CLionProjects/hexapod11/src/Robot/robotcontroler.h
 src/Robot/robot.h
-/home/monika/CLionProjects/hexapod/src/Robot/src/Robot/robot.h
+/home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/robot.h
 src/Robot/robotwalk.h
-/home/monika/CLionProjects/hexapod/src/Robot/src/Robot/robotwalk.h
+/home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/robotwalk.h
 src/Robot/Point.h
-/home/monika/CLionProjects/hexapod/src/Robot/src/Robot/Point.h
+/home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/Point.h
 
-/home/monika/CLionProjects/hexapod/src/Robot/robotwalk.cpp
+/home/monika/CLionProjects/hexapod11/src/Robot/robotwalk.cpp
 src/Robot/robotwalk.h
-/home/monika/CLionProjects/hexapod/src/Robot/src/Robot/robotwalk.h
+/home/monika/CLionProjects/hexapod11/src/Robot/src/Robot/robotwalk.h
 iostream
 -
 chrono
@@ -108,7 +108,7 @@ chrono
 thread
 -
 
-/home/monika/CLionProjects/hexapod/src/TCP/tcpacceptor.cpp
+/home/monika/CLionProjects/hexapod11/src/TCP/tcpacceptor.cpp
 stdio.h
 -
 string.h
@@ -116,17 +116,17 @@ string.h
 arpa/inet.h
 -
 tcpacceptor.h
-/home/monika/CLionProjects/hexapod/src/TCP/tcpacceptor.h
+/home/monika/CLionProjects/hexapod11/src/TCP/tcpacceptor.h
 
-/home/monika/CLionProjects/hexapod/src/TCP/tcpacceptor.h
+/home/monika/CLionProjects/hexapod11/src/TCP/tcpacceptor.h
 string
 -
 netinet/in.h
 -
 tcpstream.h
-/home/monika/CLionProjects/hexapod/src/TCP/tcpstream.h
+/home/monika/CLionProjects/hexapod11/src/TCP/tcpstream.h
 
-/home/monika/CLionProjects/hexapod/src/TCP/tcpconnector.cpp
+/home/monika/CLionProjects/hexapod11/src/TCP/tcpconnector.cpp
 stdio.h
 -
 string.h
@@ -140,21 +140,21 @@ fcntl.h
 errno.h
 -
 tcpconnector.h
-/home/monika/CLionProjects/hexapod/src/TCP/tcpconnector.h
+/home/monika/CLionProjects/hexapod11/src/TCP/tcpconnector.h
 
-/home/monika/CLionProjects/hexapod/src/TCP/tcpconnector.h
+/home/monika/CLionProjects/hexapod11/src/TCP/tcpconnector.h
 netinet/in.h
 -
 tcpstream.h
-/home/monika/CLionProjects/hexapod/src/TCP/tcpstream.h
+/home/monika/CLionProjects/hexapod11/src/TCP/tcpstream.h
 
-/home/monika/CLionProjects/hexapod/src/TCP/tcpstream.cpp
+/home/monika/CLionProjects/hexapod11/src/TCP/tcpstream.cpp
 arpa/inet.h
 -
 tcpstream.h
-/home/monika/CLionProjects/hexapod/src/TCP/tcpstream.h
+/home/monika/CLionProjects/hexapod11/src/TCP/tcpstream.h
 
-/home/monika/CLionProjects/hexapod/src/TCP/tcpstream.h
+/home/monika/CLionProjects/hexapod11/src/TCP/tcpstream.h
 sys/types.h
 -
 sys/socket.h
@@ -164,9 +164,9 @@ unistd.h
 string
 -
 
-/home/monika/CLionProjects/hexapod/src/maestro.cpp
+/home/monika/CLionProjects/hexapod11/src/maestro.cpp
 maestro.h
-/home/monika/CLionProjects/hexapod/src/maestro.h
+/home/monika/CLionProjects/hexapod11/src/maestro.h
 fcntl.h
 -
 stdio.h
@@ -176,11 +176,11 @@ unistd.h
 cmath
 -
 
-/home/monika/CLionProjects/hexapod/src/maestro.h
+/home/monika/CLionProjects/hexapod11/src/maestro.h
 termios.h
 -
 
-/home/monika/CLionProjects/hexapod/src/main.cpp
+/home/monika/CLionProjects/hexapod11/src/main.cpp
 armadillo
 -
 iostream
@@ -190,7 +190,7 @@ stdio.h
 stdlib.h
 -
 TCP/tcpacceptor.h
-/home/monika/CLionProjects/hexapod/src/TCP/tcpacceptor.h
+/home/monika/CLionProjects/hexapod11/src/TCP/tcpacceptor.h
 Robot/robotcontroler.h
-/home/monika/CLionProjects/hexapod/src/Robot/robotcontroler.h
+/home/monika/CLionProjects/hexapod11/src/Robot/robotcontroler.h
 

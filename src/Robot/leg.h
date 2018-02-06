@@ -29,7 +29,7 @@ class Leg
         void calculateServoSignals();
     public:
         Leg(Point3f joint1, Point3f angles1, Point3f lengths1, Point3f signals1);
-        Leg();
+        Leg(){};
 
         joints getJoints(){return legJoints;};
 
