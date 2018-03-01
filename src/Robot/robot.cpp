@@ -87,20 +87,20 @@ joints Robot::getLegJoints(int n)
 
     R = Rz*Ry*Rx;
 
-    arma::fmat P1 = arma::Mat<float>( { {x.A.x, x.A.y, x.A.z} } );
-    arma::fmat P2 = arma::Mat<float>( { {x.B.x, x.B.y, x.B.z} } );
-    arma::fmat P3 = arma::Mat<float>( { {x.C.x, x.C.y, x.C.z} } );
-    arma::fmat P4 = arma::Mat<float>( { {x.D.x, x.D.y, x.D.z} } );
+    arma::fvec P1 = arma::Col<float>( {x.A.x, x.A.y, x.A.z} );
+    arma::fvec P2 = arma::Col<float>( {x.B.x, x.B.y, x.B.z} );
+    arma::fvec P3 = arma::Col<float>( {x.C.x, x.C.y, x.C.z} );
+    arma::fvec P4 = arma::Col<float>( {x.D.x, x.D.y, x.D.z} );
 
-    arma::fmat P11 = R*P1;
-    arma::fmat  P22 = R*P2;
-    arma::fmat  P33 = R*P3;
-    arma::fmat  P44 = R*P4;
+    arma::fvec P11 = R*P1;
+    arma::fvec P22 = R*P2;
+    arma::fvec P33 = R*P3;
+    arma::fvec P44 = R*P4;
 
-    x.A = Point3f(P11(0,0), P11(0,1), P11(0,2)) + position;
-    x.B = Point3f(P22(0,0), P22(0,1), P22(0,2)) + position;
-    x.C = Point3f(P33(0,0), P33(0,1), P33(0,2)) + position;
-    x.D = Point3f(P44(0,0), P44(0,1), P44(0,2)) + position;
+    x.A = Point3f(P11(0), P11(1), P11(2)) + position;
+    x.B = Point3f(P22(0), P22(1), P22(2)) + position;
+    x.C = Point3f(P33(0), P33(1), P33(2)) + position;
+    x.D = Point3f(P44(0), P44(1), P44(2)) + position;
 
     return x;
 }
@@ -119,20 +119,20 @@ rect Robot::getFrame()
 
     R = Rz*Ry*Rx;
 
-    arma::fmat P1 = arma::Mat<float>( { {-width/2, 0, -length/2} } );
-    arma::fmat P2 = arma::Mat<float>( { {width/2, 0, -length/2} } );
-    arma::fmat P3 = arma::Mat<float>( { {-width/2, 0, length/2} } );
-    arma::fmat P4 = arma::Mat<float>( { {width/2, 0, length/2} } );
+    arma::fvec P1 = arma::Col<float>( {-width/2, 0, -length/2} );
+    arma::fvec P2 = arma::Col<float>( {width/2, 0, -length/2} );
+    arma::fvec P3 = arma::Col<float>( {-width/2, 0, length/2} );
+    arma::fvec P4 = arma::Col<float>( {width/2, 0, length/2} );
 
-    arma::fmat P11 = R*P1;
-    arma::fmat P22 = R*P2;
-    arma::fmat P33 = R*P3;
-    arma::fmat P44 = R*P4;
+    arma::fvec P11 = R*P1;
+    arma::fvec P22 = R*P2;
+    arma::fvec P33 = R*P3;
+    arma::fvec P44 = R*P4;
 
-    gFrame.dl = Point3f(P11(0,0), P11(0,1), P11(0,2)) + position;
-    gFrame.dr = Point3f(P22(0,0), P22(0,1), P22(0,2)) + position;
-    gFrame.ul = Point3f(P33(0,0), P33(0,1), P33(0,2)) + position;
-    gFrame.ur = Point3f(P44(0,0), P44(0,1), P44(0,2)) + position;
+    gFrame.dl = Point3f(P11(0), P11(1), P11(2)) + position;
+    gFrame.dr = Point3f(P22(0), P22(1), P22(2)) + position;
+    gFrame.ul = Point3f(P33(0), P33(1), P33(2)) + position;
+    gFrame.ur = Point3f(P44(0), P44(1), P44(2)) + position;
 
     return gFrame;
 }
@@ -157,18 +157,18 @@ void Robot::moveCoordinates(Point3f p, Point3f ang)
 
     joints x;
 
-    arma::fmat P1, P11;
+    arma::fvec P1, P11;
 
     for(int i = 0; i < 6; ++i)
     {
         x = legs[i].getJoints();
-        P1 = arma::Mat<float>( { {x.D.x, x.D.y, x.D.z} } );
+        P1 = arma::Col<float>( {x.D.x, x.D.y, x.D.z} );
         P11 = R*P1;
-        x.D = Point3f(P11(0,0), P11(0,1), P11(0,2)) - p;
+        x.D = Point3f(P11(0), P11(1), P11(2)) - p;
         legs[i].setLegEnd(x.D);
         legs[i].calculateAngles();
     }
-    Rx = arma::Mat<float>( { {1, 0, 0},
+    /*Rx = arma::Mat<float>( { {1, 0, 0},
                              {0, cos(angles.x), -sin(angles.x)},
                              {0, sin(angles.x), cos(angles.x)} } );
     Ry = arma::Mat<float>( { {cos(angles.y), 0, sin(angles.y)},
@@ -178,11 +178,11 @@ void Robot::moveCoordinates(Point3f p, Point3f ang)
                              {sin(angles.z), cos(angles.z), 0},
                              {0, 0, 1} } );
 
-    R = Rz*Ry*Rx;
+    R = Rz*Ry*Rx;*/
 
-    P1 = arma::Mat<float>( { {p.x, p.y, p.z} } );
+    P1 = arma::Col<float>( {p.x, p.y, p.z} );
     P11 = R*P1;
-    p = Point3f(P11(0,0), P11(0,1), P11(0,2));
+    p = Point3f(P11(0), P11(1), P11(2));
     position += p;
 }
 

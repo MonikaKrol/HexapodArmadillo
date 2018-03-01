@@ -19,25 +19,25 @@ void Leg::initJointPoints()
 void Leg::calculateJointPoints()
 {
     arma::fvec P1 = { {lengths.x, 0, 0} };
-    arma::fmat R1 = { {cos(angles.x), 0, sin(angles.x)},
+    arma::fmat R1 = arma::Mat<float>({ {cos(angles.x), 0, sin(angles.x)},
                       {0, 1, 0},
-                      {-sin(angles.x), 0, cos(angles.x)} };
+                      {-sin(angles.x), 0, cos(angles.x)} });
     arma::fvec P11 = R1*P1;
     P11 = R*P11;
     legJoints.B = Point3f(P11(0), P11(1), P11(2)) + legJoints.A;
 
     arma::fvec P2 = { {lengths.y, 0, 0} };
-    arma::fmat R2 = { {cos(angles.y), -sin(angles.y), 0},
+    arma::fmat R2 = arma::Mat<float>({ {cos(angles.y), -sin(angles.y), 0},
                 {sin(angles.y), cos(angles.y), 0},
-                {0, 0, 1} };
+                {0, 0, 1} });
     arma::fvec P22 = R1*(R2*P2);
     P22 = R*P22;
     legJoints.C = Point3f(P22(0), P22(1), P22(2)) + legJoints.B;
 
     arma::fvec P3 = { {lengths.z, 0, 0} };
-    arma::fmat R3 = { {cos(angles.z), -sin(angles.z), 0},
+    arma::fmat R3 = arma::Mat<float>({ {cos(angles.z), -sin(angles.z), 0},
                 {sin(angles.z), cos(angles.z), 0},
-                { 0, 0, 1} };
+                { 0, 0, 1} });
     arma::fvec P33 = R1*(R3*P3);
     P33 = R*P33;
     legJoints.D = Point3f(P33(0), P33(1), P33(2)) + legJoints.C;
